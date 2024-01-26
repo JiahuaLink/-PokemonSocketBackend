@@ -7,7 +7,7 @@
 # exts.py
 from flask import request
 
-from flask_socketio import Namespace, emit, join_room, leave_room
+from flask_socketio import Namespace
 
 
 class ConnectManager(Namespace):
@@ -18,8 +18,6 @@ class ConnectManager(Namespace):
 
     def on_connect(self):
         print(f"客户端已连接: {request.sid}")
-
-
     def on_disconnect(self):
         print(f"客户端已断开连接: {request.sid}")
         # self.leave_current_room()

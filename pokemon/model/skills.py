@@ -8,7 +8,7 @@ from exts import db
 
 
 class SkillsModel(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    skill_id = db.Column(db.Integer, primary_key=True)
     chinese_name = db.Column(db.String(255))
     english_name = db.Column(db.String(255))
     type = db.Column(db.String(50))

@@ -21,17 +21,9 @@ class RoomManager(Namespace):
     def __init__(self, namespace):
         super().__init__(namespace)
 
-    def on_connect(self):
-        print(f"客户端已连接: {request.sid}")
-
     def on_rooms_list(self):
         print('on_rooms_list事件', rooms_info)
         emit('rooms_list', rooms_info)
-
-    def on_disconnect(self):
-        print(f"客户端已断开连接: {request.sid}")
-        # self.leave_current_room()
-
     def on_create_room(self, data):
         print('create_room', data)
         room_name = data.get('room_name')
