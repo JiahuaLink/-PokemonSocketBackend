@@ -2,7 +2,7 @@
 # @Time : 2024/1/21 13:54
 # @Author : JiahuaLInk
 # @Email : 840132699@qq.com
-# @File : socket_handler.py
+# @File : room_handler.py
 # @Software: PyCharm
 # exts.py
 from flask import request
@@ -15,7 +15,7 @@ rooms_info = {
     }
 }
 
-class WebSocketManager(Namespace):
+class RoomManager(Namespace):
     # 用于存储房间信息，格式为 {room_name: {'users': [user1, user2], 'game_started': False}}
 
     def __init__(self, namespace):
